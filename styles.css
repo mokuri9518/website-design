@@ -10,3 +10,7 @@ body{
     color: aqua;
     background-color: yellow;
 }
+em{
+	font-style:italic;
+	color: purple;
+}
