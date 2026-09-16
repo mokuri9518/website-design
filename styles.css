@@ -7,6 +7,6 @@ body{
 b{
 	font-weight:bold;
 	font-size:large;
-	color:aqua;
-	color-schema:yello;
+    color: aqua;
+    background-color: yellow;
 }
