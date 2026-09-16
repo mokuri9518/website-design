@@ -4,7 +4,7 @@ body{
 .title {
 	color: #5C6AC4;
 }
-b{
+.strong{
 	font-weight:bold;
 	font-size:large;
     color: aqua;
