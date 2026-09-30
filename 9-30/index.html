@@ -1,34 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9/30</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            line-height: 1.3;
+            color: #000;
+            background-color: #fff;
+            padding: 40px;
+        }
 
+        ol.main-list {
+            list-style-type: upper-roman;
+            padding-left: 40px;
+        }
+
+        ol.main-list > li {
+            margin-bottom: 6px;
+        }
+
+        ul.square-list {
+            list-style-type: square;
+            padding-left: 40px;
+            margin-top: 4px;
+            margin-bottom: 20px;
+        }
+
+        ul.square-list li {
+            margin-bottom: 2px;
+        }
+
+        .definition-section {
+            margin-left: 40px;
+            margin-bottom: 25px;
+        }
+
+        .term-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .bullet-square {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            margin-right: 12px;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .term-title {
+            font-size: 18px;
+        }
+
+        .definition-text {
+            margin-left: 100px;
+            margin-top: 2px;
+            max-width: 320px;
+        }
+
+        .scale-section {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .scale-title {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .scale-desc {
+            margin-left: 100px;
+            max-width: 320px;
+        }
+
+        .scale-desc p {
+            margin: 0 0 4px 0;
+        }
+    </style>
 </head>
 <body>
-    <ol>
+
+    <ol class="main-list">
         <li>Chop potatoes into quarters</li>
         <li>
             Simmer in salted water for 15-20<br>
             minutes until tender
-            <ul >
+            <ul class="square-list">
                 <li>1kg King Edward potatoes</li>
                 <li>100ml milk</li>
                 <li>50g salted butter</li>
                 <li>Freshly grated nutmeg</li>
                 <li>Salt and pepper to taste</li>
             </ul>
-
-            <div>
-                <div >
+            <div class="definition-section">
+                <div class="term-row">
                     <span class="bullet-square"></span>
                     <span class="term-title">Sashimi</span>
                 </div>
                 <div class="definition-text">
                     Sliced raw fish served with condiments
                 </div>
+
                 <div class="scale-section">
                     <div class="scale-title">Scale</div>
                     <div class="scale-desc">
