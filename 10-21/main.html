@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/21</title>
+    <style>
+        body{
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid rgb(105, 105, 105);
+            padding: 1px;
+        }
+
+        th {
+            background-color: rgb(24, 30, 26);
+            color: white;
+            font-size: small;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            padding-left: 5px;
+            text-align:left;
+            /* 讓文字水平置中 */
+            vertical-align: middle;
+            /* 讓文字垂直置中 */
+            height: 50px;
+        }
+
+        table {
+            border-spacing: 1px;
+        }
+        .lightlightgray td {
+            background-color: #e5e4e4;
+        }
+        tr td.header{
+            font-weight: bold;
+            background-color: #fbf0c3;
+        }
+        tr td.red {
+            background-color: rgb(246, 196, 178);
+            color: #a53c3c;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h6 style="font-weight: bold;color: #a53c3c;">03/ TRAVEL PLANNER</h6>
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Three Days in Tokyo.</h1>
+    <p style="font-weight: 200;color: gray;">Plan your mornings.afternoons,and evenings with this simple three-day itineray.</p>
+    <br>
+    <table style="width:100%">
+    <tr>
+        <th>Day</th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+    </tr>
+    <tr class="lightlightgray">
+        <td class="header">Day 1</td>
+        <td>Asakusa Temple</td>
+        <td>Ueno Park</td>
+        <td>Shibuya</td>
+    </tr>
+    <tr>
+        <td class="header">Day 2</td>
+        <td>Meiji Shrine</td>
+        <td>Harajuku</td>
+        <td>Shinjuku</td>
+    </tr>
+    <tr class="lightlightgray">
+        <td class="header">Day 3</td>
+        <td class="red" colspan="2" style="text-align: center; font-weight: bold;">Tokyo DisneySea</td>
+        <td>Odaiba</td>
+    </tr>
+</table>
+
+<br><br>
+
+<!-- 中間的標題與副標題 -->
+<h2>Travel Budget</h2>
+<p style="color: gray; margin-bottom: 20px;">A sample budget for transportation and meals in Tokyo.</p>
+
+<!-- 第二個表格：預算表 -->
+<table style="width:100%">
+    <tr>
+        <th>Category</th>
+        <th>Item</th>
+        <th style="text-align: left;">Estimated Cost</th>
+    </tr>
+    <tr class="lightlightgray">
+        <td class="header" rowspan="2" style="vertical-align: middle;">Transportation</td>
+        <td>Metro</td>
+        <td style="text-align: right; padding-right: 15px;">¥1,000</td>
+    </tr>
+    <tr>
+        <td>Train</td>
+        <td style="text-align: right; padding-right: 15px;">¥1,500</td>
+    </tr>
+    <tr class="lightlightgray">
+        <td class="header" rowspan="2" style="vertical-align: middle;">Food</td>
+        <td>Lunch</td>
+        <td style="text-align: right; padding-right: 15px;">¥1,200</td>
+    </tr>
+    <tr>
+        <td>Dinner</td>
+        <td style="text-align: right; padding-right: 15px;">¥2,000</td>
+    </tr>
+</body>
+
+</html>
