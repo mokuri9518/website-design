@@ -1,6 +1,25 @@
 /* ==========================================
-   通用與基礎樣式 (Global & Base)
+   引進 Google Fonts (Plus Jakarta Sans)
    ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================
+   全域變數與基礎設定 (Variables & Base)
+   ========================================== */
+:root {
+    --primary-green: #4a5842;
+    --primary-hover: #3b4734;
+    --accent-terracotta: #c86b4b;
+    --accent-light-red: #f7e6e0;
+    --bg-main: #fbfaf6;
+    --bg-card: #efece1;
+    --bg-banner: #eae7dc;
+    --text-dark: #2c3328;
+    --text-muted: #5e6659;
+    --border-color: #d1cbd5;
+    --table-header: #384232;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +31,10 @@ html {
 }
 
 body {
-    color: #273027;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    background: #fbfaf6;
+    background: var(--bg-main);
 }
 
 a {
@@ -29,29 +48,34 @@ a {
 }
 
 /* ==========================================
-   頁首與導覽列 (Header & Banner Nav)
+   頁首與導覽列 (Header & Navigation)
    ========================================== */
 .banner {
-    min-height: 76px;
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f0f0f0;
+    background: var(--bg-banner);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    padding: 12px 20px;
-    font-size: 28px;
-    font-weight: bold;
+    padding: 12px 24px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--primary-green);
+    transition: background-color 0.2s ease;
 }
 
 .logo:hover,
 .nav a:hover,
 .nav a:focus-visible {
-    background: #91ac67;
+    background: var(--primary-green);
+    color: #ffffff;
 }
 
 .nav {
@@ -63,8 +87,10 @@ a {
 
 .nav a {
     display: block;
-    padding: 25px 18px;
-    font-size: 17px;
+    padding: 22px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 /* ==========================================
@@ -72,13 +98,13 @@ a {
    ========================================== */
 .mainCanva {
     position: relative;
-    min-height: 500px;
+    min-height: 520px;
     overflow: hidden;
     isolation: isolate;
     display: flex;
     align-items: center;
-    color: #fff;
-    background: #53604b;
+    color: #ffffff;
+    background: var(--primary-green);
 }
 
 .mainCanva .image {
@@ -95,63 +121,72 @@ a {
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: linear-gradient(90deg, rgba(15, 20, 15, .86) 0%, rgba(24, 30, 22, .58) 42%, rgba(255, 255, 255, .05) 100%);
+    background: linear-gradient(90deg, rgba(30, 38, 26, 0.88) 0%, rgba(44, 51, 40, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .canva-content {
     width: min(620px, 80%);
     padding: 72px 8%;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, .25);
 }
 
 .eyebrow {
     margin-bottom: 12px;
-    color: #d9e7bd;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: .18em;
+    color: #dbe8cd;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
 .canva-content h1 {
     margin-bottom: 16px;
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.05;
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
 }
 
 .canva-content p {
-    max-width: 460px;
-    font-size: 18px;
+    max-width: 480px;
+    font-size: 17px;
+    opacity: 0.95;
 }
 
 /* ==========================================
-   照片牆區塊 (secCanva)
+   相片畫廊區塊 (secCanva)
    ========================================== */
 .secCanva {
-    padding: 76px 0 84px;
+    padding: 80px 0;
 }
 
 .section-heading {
-    margin-bottom: 28px;
+    margin-bottom: 36px;
     text-align: center;
 }
 
 .section-heading h2 {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.section-heading p {
+    color: var(--text-muted);
 }
 
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    gap: 24px;
 }
 
 .image-card {
     position: relative;
     aspect-ratio: 1;
     overflow: hidden;
-    background: #dfe5d6;
+    border-radius: 8px;
+    background: var(--bg-card);
 }
 
 .image-card img {
@@ -159,19 +194,19 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .45s ease;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .image-card .overlay {
     position: absolute;
     inset: 0;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     padding: 24px;
-    color: white;
-    background: linear-gradient(0deg, rgba(20, 28, 18, .82), rgba(20, 28, 18, .08) 75%);
+    color: #ffffff;
+    background: linear-gradient(0deg, rgba(28, 36, 25, 0.85) 0%, rgba(28, 36, 25, 0) 70%);
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .image-card:hover .overlay,
@@ -181,19 +216,20 @@ a {
 
 .image-card:hover img,
 .image-card:focus-within img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .image-card h3 {
-    font-size: 23px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* ==========================================
    簡介故事區塊 (thrCanva)
    ========================================== */
 .thrCanva {
-    padding: 64px 8%;
-    background: #f0f0e8;
+    padding: 80px 8%;
+    background: var(--bg-card);
 }
 
 .story {
@@ -203,28 +239,33 @@ a {
 
 .story h2 {
     margin-bottom: 16px;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-green);
 }
 
 .story p {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+    color: var(--text-dark);
 }
 
 .story-image {
-    width: min(250px, 42%);
-    margin: 0 0 18px 24px;
+    width: min(260px, 42%);
+    margin: 0 0 20px 24px;
     float: right;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .story-image.left {
     float: left;
-    margin: 0 24px 18px 0;
+    margin: 0 24px 20px 0;
 }
 
 .story-image img {
     display: block;
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
 }
 
@@ -235,65 +276,75 @@ a {
 }
 
 /* ==========================================
-   表格區塊：Quokka 旅遊行程與預算表 (10/21 main.html)
+   表格區塊：Quokka 旅遊行程與預算表 (風格統一)
    ========================================== */
 .tableCanva {
-    padding: 64px 5%;
-    background: #fbfaf6;
+    padding: 80px 8%;
+    background: var(--bg-main);
 }
 
 .tableCanva h2 {
     font-size: 28px;
-    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 6px;
 }
 
 .tableCanva p.sub {
-    color: #555;
-    margin-bottom: 20px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
 }
 
-/* 表格專屬設定：消除間隙邊框與對齊 */
+/* 統一表格視覺設計 */
 .custom-table {
     width: 100%;
-    border-collapse: collapse; /* 消除表格間隙 */
-    margin-bottom: 40px;
+    border-collapse: collapse;
+    margin-bottom: 48px;
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .custom-table,
 .custom-table th,
 .custom-table td {
-    border: 1px solid rgb(105, 105, 105);
+    border: 1px solid #dcd7ca;
 }
 
 .custom-table th {
-    background-color: rgb(24, 30, 26);
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    height: 45px;
+    background-color: var(--table-header);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    height: 48px;
     text-align: left;
-    padding-left: 12px;
+    padding: 0 16px;
 }
 
 .custom-table td {
-    padding: 10px 12px;
+    padding: 12px 16px;
     text-align: left;
     vertical-align: middle;
     height: 50px;
+    font-size: 15px;
 }
 
 .custom-table tr.lightlightgray td {
-    background-color: #e5e4e4;
+    background-color: #f4f1e8;
 }
 
 .custom-table tr td.header {
-    font-weight: bold;
-    background-color: #fbf0c3;
+    font-weight: 700;
+    background-color: #e8e2d1;
+    color: var(--primary-green);
 }
 
 .custom-table tr td.red {
-    background-color: rgb(246, 196, 178);
-    color: #a53c3c;
+    background-color: var(--accent-light-red);
+    color: var(--accent-terracotta);
+    border-color: #ecd2c9;
 }
 
 /* ==========================================
@@ -319,26 +370,21 @@ a {
 
     .nav a {
         padding: 14px 12px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .mainCanva {
-        min-height: 430px;
-    }
-
-    .mainCanva .overlay {
-        background: linear-gradient(90deg, rgba(15, 20, 15, .82), rgba(15, 20, 15, .24));
+        min-height: 420px;
     }
 
     .canva-content {
         width: 100%;
-        padding: 56px 8%;
+        padding: 48px 8%;
     }
 
     .image-grid {
         grid-template-columns: 1fr;
         gap: 16px;
-        padding: 0 7%;
     }
 
     .image-card .overlay {
@@ -346,7 +392,7 @@ a {
     }
 
     .thrCanva, .tableCanva {
-        padding: 48px 8%;
+        padding: 48px 6%;
     }
 }
 
@@ -358,6 +404,6 @@ a {
     *,
     *::before,
     *::after {
-        transition-duration: .01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
