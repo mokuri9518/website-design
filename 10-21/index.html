@@ -10,25 +10,43 @@
         td {
             border: 1px solid white;
             padding: 1px;
-            display: block;
         }
-        th{background-color: rgb(100, 100, 100);color: white;}
-        th,td{width: 100px;height: 50px;}
+
+        th {
+            background-color: rgb(100, 100, 100);
+            color: white;
+        }
+
+        th,
+        td {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            /* 讓文字水平置中 */
+            vertical-align: middle;
+            /* 讓文字垂直置中 */
+        }
+
         table {
             border-spacing: 1px;
         }
-        .lightgray td{
+
+        .lightgray td {
             background-color: #bebebe;
         }
-        .lightlightgray td{
+
+        .lightlightgray td {
             background-color: #e5e4e4;
         }
+
         tr td.green {
             background-color: lightgreen;
         }
+
         tr td.blue {
             background-color: lightskyblue;
         }
+
         tr td.red {
             background-color: rgb(238, 171, 144);
         }
@@ -38,44 +56,45 @@
 <body>
 
 
-<table style="width:100%">
-    <tr>
-        <th>Time</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-    </tr>
-    <tr class="lightgray">
-        <td>7:30</td>
-        <td>breakfast</td>
-        <td>breakfast</td>
-        <td>breakfast</td>
-    </tr>
-    <tr class="lightlightgray">
-        <td>8:00</td>
-        <td class="green" rowspan="2">Business: Lecture Bidg B,Rm 256</td>
-        <td class="red" rowspan="3">Physics: Lab Bidg j,Rm 309</td>
-        <td class="green" rowspan="2">Business: Lecture Bidg B,Rm 256</td>
-    </tr>
-    <tr class="lightgray">
-        <td>8:30</td>
-    </tr>
-    <tr class="lightlightgray">
-        <td>9:00</td>
-        <td class="blue" rowspan="2">Applied Math Bidg H,Rm 100</td>
-        <td class="blue" rowspan="2">Applied Math Bidg H,Rm 100</td>
-    </tr>
-    <tr class="lightgray">
-        <td>9:30</td>
-        <td></td>
-    </tr>
-    <tr class="lightlightgray">
-        <td>10:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+    <table style="width:100%">
+        <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+        </tr>
+        <tr class="lightgray">
+            <td>7:30</td>
+            <td>breakfast</td>
+            <td>breakfast</td>
+            <td>breakfast</td>
+        </tr>
+        <tr class="lightlightgray">
+            <td>8:00</td>
+            <td class="green" rowspan="2">Business: Lecture Bidg B,Rm 256</td>
+            <td class="red" rowspan="3">Physics: Lab Bidg j,Rm 309</td>
+            <td class="green" rowspan="2">Business: Lecture Bidg B,Rm 256</td>
+        </tr>
+        <tr class="lightgray">
+            <td>8:30</td>
+        </tr>
+        <tr class="lightlightgray">
+            <td>9:00</td>
+            <td class="blue" rowspan="2">Applied Math Bidg H,Rm 100</td>
+            <td class="blue" rowspan="2">Applied Math Bidg H,Rm 100</td>
+        </tr>
+        <tr class="lightgray">
+            <td>9:30</td>
+            <td></td>
+        </tr>
+        <tr class="lightlightgray">
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
 
-</table>
+    </table>
 </body>
+
 </html>
