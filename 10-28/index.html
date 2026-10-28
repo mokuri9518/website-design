@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function buttonEvent() {
+            generatetable();
+        };
+        function generatetable() {
+            var table = "<table border='1' style='border-collapse: collapse;'>";
+            for (var i = 1; i <= 9; i++) {
+                table += "<tr>";
+                for (var j = 1; j <= 9; j++) {
+                    table += "<td>"+j+"×"+i+" = "+(i * j)+"</td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.getElementById("demo").innerHTML = table;
+            var tds = document.getElementsByTagName("td");
+            for (var k = 0; k < tds.length; k++) {
+                tds[k].style.width = "100px";
+                tds[k].style.textAlign="center";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>what can js do?</p>
+    <button onclick="buttonEvent();">pop</button>
+    <p id="demo"></p>
+</body>
+</html>
