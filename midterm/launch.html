@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="用實用檢查清單與互動小測驗，確認你的期中專題已準備好公開發表。">
+  <title>測試與發表 — 期中專題指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="期中專題指南首頁"><span class="brand-mark">M.</span><span>期中專題指南</span></a>
+    <nav class="site-nav" aria-label="主要導覽">
+      <a href="index.html">總覽</a><a href="planning.html">規劃專題</a><a href="building.html">打造網站</a><a href="launch.html" aria-current="page">測試與發表</a>
+    </nav>
+  </header>
+  <main id="main" class="page-main">
+    <section class="page-hero">
+      <p class="eyebrow"><span class="eyebrow-line"></span> 03 — TEST, THEN SHARE</p>
+      <h1>最後一步，<br><span class="text-accent">讓好作品被看見。</span></h1>
+      <p class="page-lead">作品快完成時，別急著按下發表。用使用者的角度走一遍網站，確認每個頁面、連結與互動都能順利運作。</p>
+      <div class="page-meta"><span>測試網站</span><span>整理報告</span><span>公開發表</span></div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-heading"><span class="section-kicker">01 / BEFORE YOU SHARE</span><h2>發表前，逐項確認。</h2></div>
+      <div class="launch-grid">
+        <article class="launch-card"><span class="launch-icon" aria-hidden="true">↗</span><h3>瀏覽與連結</h3><ul><li>四個頁面都能透過導覽互相前往</li><li>內部連結與外部連結都能正常開啟</li><li>重新整理每個頁面，不會出現錯誤</li></ul></article>
+        <article class="launch-card"><span class="launch-icon" aria-hidden="true">▣</span><h3>畫面與內容</h3><ul><li>手機和電腦畫面都能清楚閱讀</li><li>圖片載入正常，並附有替代文字</li><li>檢查錯字、段落、表格與標題</li></ul></article>
+        <article class="launch-card"><span class="launch-icon" aria-hidden="true">✳</span><h3>互動與公開</h3><ul><li>每項按鈕都有清楚且正確的回應</li><li>報告含專題介紹、程式解說與心得</li><li>確認 GitHub Pages 網址可公開瀏覽</li></ul></article>
+      </div>
+    </section>
+
+    <section class="content-section section-tinted">
+      <div class="content-heading"><span class="section-kicker">02 / QUICK KNOWLEDGE CHECK</span><h2>做一份小測驗，檢查看看準備好了沒。</h2></div>
+      <p class="section-description">選出你認為正確的答案，送出後會立即看到得分和說明。</p>
+      <form class="quiz-card" data-quiz>
+        <fieldset class="quiz-question">
+          <legend><span>01</span> HTML、CSS 和 JavaScript 分別負責什麼？</legend>
+          <label><input type="radio" name="q1" value="a"><span>HTML 排版、CSS 存資料、JavaScript 做圖片</span></label>
+          <label><input type="radio" name="q1" value="b"><span>HTML 組織內容、CSS 設計外觀、JavaScript 加入互動</span></label>
+          <label><input type="radio" name="q1" value="c"><span>三者都是不同名字的樣式語言</span></label>
+        </fieldset>
+        <fieldset class="quiz-question">
+          <legend><span>02</span> 網頁中的圖片為什麼要有替代文字？</legend>
+          <label><input type="radio" name="q2" value="a"><span>幫助無法看到圖片的使用者理解重要資訊</span></label>
+          <label><input type="radio" name="q2" value="b"><span>讓圖片自動變大</span></label>
+          <label><input type="radio" name="q2" value="c"><span>讓瀏覽器幫忙翻譯網站</span></label>
+        </fieldset>
+        <fieldset class="quiz-question">
+          <legend><span>03</span> 發表前最好的測試方式是什麼？</legend>
+          <label><input type="radio" name="q3" value="a"><span>只檢查首頁的顏色</span></label>
+          <label><input type="radio" name="q3" value="b"><span>只確認自己的電腦可以開啟</span></label>
+          <label><input type="radio" name="q3" value="c"><span>逐頁測試導覽、連結、互動和不同螢幕</span></label>
+        </fieldset>
+        <div class="quiz-actions"><button class="button button-dark" type="submit">查看我的結果 <span aria-hidden="true">↗</span></button><button class="button button-reset" type="reset">重新作答</button></div>
+        <p class="quiz-result" data-quiz-result aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="content-section reflection-section">
+      <div class="reflection-copy"><span class="section-kicker">03 / YOUR STORY</span><h2>把製作過程，<br>也變成作品的一部分。</h2><p>解說報告不只是交代用了什麼程式碼，也讓讀者了解你為什麼做這個專題、遇到什麼挑戰，以及接下來還想如何改進。</p></div>
+      <ol class="reflection-list">
+        <li><span>01</span><div><strong>專題介紹</strong><p>主題目的、目標使用者、選題原因。</p></div></li>
+        <li><span>02</span><div><strong>網站與程式解說</strong><p>頁面用途、HTML/CSS 說明、JavaScript 互動功能。</p></div></li>
+        <li><span>03</span><div><strong>心得與下一步</strong><p>製作挑戰、學習收穫、未來想改進的地方。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="final-callout">
+      <span class="callout-spark" aria-hidden="true">✳</span>
+      <p class="eyebrow">YOU MADE IT</p><h2>你已經走過，<br>從想法到上線的每一步。</h2>
+      <p>記得附上 GitHub 儲存庫、GitHub Pages 網址，以及你的程式解說報告。</p>
+      <a class="button button-primary" href="index.html">回到指南首頁 <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark">M.</span><span>期中專題指南</span></a><p>從想法到上線，陪你完成每一步。</p><a class="back-top" href="#main">回到頂端 ↑</a><span class="footer-copy">WEB PROGRAMMING MIDTERM · 2026</span>
+  </footer>
+</body>
+</html>

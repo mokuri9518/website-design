@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="使用語意化 HTML、外部 CSS 與原生 JavaScript，建立好讀、好用的期中專題網站。">
+  <title>打造網站 — 期中專題指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="期中專題指南首頁"><span class="brand-mark">M.</span><span>期中專題指南</span></a>
+    <nav class="site-nav" aria-label="主要導覽">
+      <a href="index.html">總覽</a><a href="planning.html">規劃專題</a><a href="building.html" aria-current="page">打造網站</a><a href="launch.html">測試與發表</a>
+    </nav>
+  </header>
+  <main id="main" class="page-main">
+    <section class="page-hero">
+      <p class="eyebrow"><span class="eyebrow-line"></span> 02 — MAKE IT WORK</p>
+      <h1>用網頁技術，<br><span class="text-accent">把體驗做好。</span></h1>
+      <p class="page-lead">HTML 安排內容、CSS 設計視覺、JavaScript 加入互動。先確保每一頁都清楚好讀，再為使用者加上真正有幫助的功能。</p>
+      <div class="page-meta"><span>HTML 結構</span><span>CSS 版面</span><span>JavaScript 互動</span></div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-heading"><span class="section-kicker">01 / THE BUILDING BLOCKS</span><h2>三種技術，各司其職。</h2></div>
+      <div class="tech-grid">
+        <article class="tech-card"><span class="tech-label">01 / STRUCTURE</span><span class="tech-symbol" aria-hidden="true">&lt;/&gt;</span><h3>HTML 說清楚內容</h3><p>用標題、段落、清單與表格組織資訊。選擇有意義的語意標籤，讓人和輔助工具都容易理解頁面。</p><a href="https://developer.mozilla.org/zh-TW/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener noreferrer">閱讀 HTML 指南 <span aria-hidden="true">↗</span></a></article>
+        <article class="tech-card"><span class="tech-label">02 / PRESENTATION</span><span class="tech-symbol" aria-hidden="true">✳</span><h3>CSS 整理視覺和版面</h3><p>用顏色、字體、留白與格線建立一致的風格，也用媒體查詢讓手機和平板都好瀏覽。</p><a href="https://developer.mozilla.org/zh-TW/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noopener noreferrer">閱讀 CSS 指南 <span aria-hidden="true">↗</span></a></article>
+        <article class="tech-card"><span class="tech-label">03 / INTERACTION</span><span class="tech-symbol" aria-hidden="true">{ }</span><h3>JavaScript 回應操作</h3><p>監聽使用者的操作、讀取表單資料，再更新頁面內容。讓互動功能真的解決問題，不只是裝飾。</p><a href="https://developer.mozilla.org/zh-TW/docs/Learn_web_development/Core/Scripting" target="_blank" rel="noopener noreferrer">閱讀 JavaScript 指南 <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="content-section section-tinted">
+      <div class="content-heading"><span class="section-kicker">02 / DESIGN FOR PEOPLE</span><h2>畫面漂亮之外，也要用得順手。</h2></div>
+      <div class="design-layout">
+        <div class="design-note"><span class="note-large" aria-hidden="true">↗</span><h3>先照顧閱讀體驗。</h3><p>對比清楚、文字容易讀、導覽位置一致。這些基本功比堆疊裝飾更能讓使用者留下來。</p><a class="text-link" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener noreferrer">認識網頁無障礙 <span aria-hidden="true">↗</span></a></div>
+        <ul class="design-list">
+          <li><span class="design-list-number">01</span><div><strong>用標題建立層次</strong><p>每頁只有一個主要標題，副標題依序分層，讓人快速找到重點。</p></div></li>
+          <li><span class="design-list-number">02</span><div><strong>替圖片補上替代文字</strong><p>描述圖片的重要資訊；純裝飾圖片則使用空的 alt 屬性。</p></div></li>
+          <li><span class="design-list-number">03</span><div><strong>讓所有頁面容易往返</strong><p>每頁都放上完整導覽，並標出目前所在頁面。</p></div></li>
+          <li><span class="design-list-number">04</span><div><strong>小螢幕也能舒服閱讀</strong><p>使用彈性版面，並在手機上檢查文字、按鈕和表格。</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-heading"><span class="section-kicker">03 / KEEP IT ORGANIZED</span><h2>簡單的檔案結構，更容易維護。</h2></div>
+      <p class="section-description">把頁面、共用樣式和互動程式分開放，日後要修改時，會更快找到正確的位置。</p>
+      <div class="file-tree" aria-label="網站檔案結構範例">
+        <p><span class="tree-symbol">▾</span> my-midterm-project/</p>
+        <p class="tree-child"><span class="tree-symbol">├─</span> index.html <span class="tree-note">首頁</span></p>
+        <p class="tree-child"><span class="tree-symbol">├─</span> planning.html <span class="tree-note">規劃頁</span></p>
+        <p class="tree-child"><span class="tree-symbol">├─</span> building.html <span class="tree-note">製作頁</span></p>
+        <p class="tree-child"><span class="tree-symbol">├─</span> launch.html <span class="tree-note">發表頁</span></p>
+        <p class="tree-child"><span class="tree-symbol">└─</span> src/ <span class="tree-note">共用資源</span></p>
+        <p class="tree-grandchild"><span class="tree-symbol">├─</span> style.css</p>
+        <p class="tree-grandchild"><span class="tree-symbol">└─</span> script.js</p>
+      </div>
+    </section>
+
+    <div class="next-page"><div><span class="section-kicker">NEXT STEP</span><p>網站已經成形？接著確認每個細節。</p></div><a class="button button-dark" href="launch.html">前往測試與發表 <span aria-hidden="true">↗</span></a></div>
+  </main>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark">M.</span><span>期中專題指南</span></a><p>從想法到上線，陪你完成每一步。</p><a class="back-top" href="#main">回到頂端 ↑</a><span class="footer-copy">WEB PROGRAMMING MIDTERM · 2026</span>
+  </footer>
+</body>
+</html>

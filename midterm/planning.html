@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="學會選定期中專題題目、整理網站頁面，並安排可執行的製作時程。">
+  <title>規劃專題 — 期中專題指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="期中專題指南首頁"><span class="brand-mark">M.</span><span>期中專題指南</span></a>
+    <nav class="site-nav" aria-label="主要導覽">
+      <a href="index.html">總覽</a><a href="planning.html" aria-current="page">規劃專題</a><a href="building.html">打造網站</a><a href="launch.html">測試與發表</a>
+    </nav>
+  </header>
+  <main id="main" class="page-main">
+    <section class="page-hero">
+      <p class="eyebrow"><span class="eyebrow-line"></span> 01 — START WITH A PLAN</p>
+      <h1>先理清方向，<br><span class="text-accent">再開始動手。</span></h1>
+      <p class="page-lead">一份清楚的小計畫，能讓你少走很多彎路。先決定要幫助誰、要做什麼，再把工作拆成幾個做得到的步驟。</p>
+      <div class="page-meta"><span>選定主題</span><span>建立架構</span><span>安排時程</span></div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-heading"><span class="section-kicker">01 / CHOOSE</span><h2>從生活裡，找到值得解決的問題。</h2></div>
+      <div class="split-content">
+        <div class="split-copy">
+          <p>好題目通常不是「我要做一個很大的網站」，而是「有一群人需要一個實用的小幫手」。把興趣與使用者需求放在一起，想想你能提供什麼具體資訊或服務。</p>
+          <ol class="numbered-list">
+            <li><strong>誰會使用？</strong><span>想像一位具體的目標使用者，而不是「所有人」。</span></li>
+            <li><strong>他需要什麼？</strong><span>找出一個真實、清楚而且值得改善的需求。</span></li>
+            <li><strong>你能先做什麼？</strong><span>保留一個核心功能，其他點子放進「以後再做」。</span></li>
+          </ol>
+        </div>
+        <figure class="content-image">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="筆記本上的手寫規劃筆記與桌面文具">
+          <figcaption>先把點子寫下來，答案會慢慢浮現。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-section section-tinted" id="schedule">
+      <div class="content-heading"><span class="section-kicker">02 / BREAK IT DOWN</span><h2>用四週，走完一段清楚的路。</h2></div>
+      <p class="section-description">依照課程進度調整日期。重要的是每週都留下一個看得見的成果。</p>
+      <div class="table-wrap">
+        <table data-schedule-table>
+          <caption>期中專題建議進度表</caption>
+          <thead><tr><th scope="col">週次</th><th scope="col">主要任務</th><th scope="col">完成成果</th><th scope="col">小提醒</th></tr></thead>
+          <tbody data-schedule-body></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section checklist-section">
+      <div class="content-heading"><span class="section-kicker">03 / YOUR CHECKLIST</span><h2>完成一格，就前進一格。</h2></div>
+      <p class="section-description">勾選你已完成的項目，看看規劃進度。重新整理頁面後，勾選狀態會保留在這台裝置上。</p>
+      <div class="checklist-panel" data-checklist>
+        <div class="checklist-top">
+          <div><p class="checklist-label">專題準備度</p><p class="checklist-count"><span data-progress-count>0</span> / 6 項完成</p></div>
+          <span class="progress-percent" data-progress-percent>0%</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="專題準備度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-progress-bar><span></span></div>
+        <div class="checklist-items">
+          <label><input type="checkbox" data-check-item="topic"><span class="custom-check" aria-hidden="true"></span><span><strong>我選定了專題主題</strong><small>主題與自己的興趣或觀察有關</small></span></label>
+          <label><input type="checkbox" data-check-item="audience"><span class="custom-check" aria-hidden="true"></span><span><strong>我知道網站要幫助誰</strong><small>可以用一句話描述目標使用者</small></span></label>
+          <label><input type="checkbox" data-check-item="need"><span class="custom-check" aria-hidden="true"></span><span><strong>我整理出使用者的需求</strong><small>網站內容有明確的實用目的</small></span></label>
+          <label><input type="checkbox" data-check-item="pages"><span class="custom-check" aria-hidden="true"></span><span><strong>我規劃好至少四個頁面</strong><small>每一頁都有不同的資訊用途</small></span></label>
+          <label><input type="checkbox" data-check-item="schedule"><span class="custom-check" aria-hidden="true"></span><span><strong>我排定每週要完成的工作</strong><small>工作量合理，也留有測試時間</small></span></label>
+          <label><input type="checkbox" data-check-item="features"><span class="custom-check" aria-hidden="true"></span><span><strong>我想好兩項不同的互動功能</strong><small>每項功能都能幫上使用者</small></span></label>
+        </div>
+        <p class="checklist-feedback" data-checklist-feedback aria-live="polite">不用趕進度，先選出你的第一個小任務。</p>
+      </div>
+    </section>
+
+    <div class="next-page"><div><span class="section-kicker">NEXT STEP</span><p>方向有了？接著把它做成網站。</p></div><a class="button button-dark" href="building.html">前往打造網站 <span aria-hidden="true">↗</span></a></div>
+  </main>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark">M.</span><span>期中專題指南</span></a><p>從想法到上線，陪你完成每一步。</p><a class="back-top" href="#main">回到頂端 ↑</a><span class="footer-copy">WEB PROGRAMMING MIDTERM · 2026</span>
+  </footer>
+</body>
+</html>
