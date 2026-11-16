@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-16</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        div.canvas{
+            display: flex;
+            align-items: center;
+            height: 400px;
+            width: 800px;
+            align-self: center;
+        }
+        canvas{
+            height: 400px;
+            width: 400px;
+            color: #fa8072;
+        }
+    </style>
+    <script>
+        function draw1(){
+            const canvas = document.getElementById("1");
+            canvas.width = 400;
+            canvas.height = 400;
+            const ctx = canvas.getContext("2d");
+            ctx.fillRect(0,0,400,400);
+            ctx.beginPath();
+            ctx.arc(200,200,100,0,Math.PI/2);
+            ctx.lineTo(100,200);
+            ctx.fillStyle('#e07072');
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+        }
+        function onload(sender,e){
+            draw1();
+        }
+        document.addEventListener("load",onload);
+
+    </script>
+</head>
+<body>
+    <div class="canvas">
+        <canvas id="1"></canvas>
+        <canvas id="2"></canvas>
+    </div>
+    <div class="canvas">
+        <canvas id="3"></canvas>
+        <canvas id="4"></canvas>
+    </div>
+</body>
+</html>
