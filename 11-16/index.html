@@ -6,39 +6,132 @@
     <style>
         *{margin: 0px;padding: 0px;}
         div.canvas{
+            align-content: center;
             display: flex;
             align-items: center;
             height: 400px;
             width: 800px;
             align-self: center;
         }
+        div.padding{
+            padding-left: 10%;
+            padding-right: 10%;
+        }
         canvas{
             height: 400px;
             width: 400px;
-            color: #fa8072;
+            color: #1b4d0e;
         }
     </style>
-    <script>
-            const canvas = document.getElementById("1");
-            const ctx = canvas.getContext("2d");
+
+</head>
+<body>
+    <div class="padding">
+    <div class="canvas" id="canvas1-2">
+        <canvas id="1"></canvas>
+        <script>
+            let canvas = document.getElementById("1");
+            canvas.width = 400;
+            canvas.height = 400;
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = '#fdea94';
             ctx.fillRect(0,0,400,400);
             ctx.beginPath();
-            ctx.arc(200,200,100,0,Math.PI/2);
+            ctx.arc(200,200,100,Math.PI,0);
             ctx.lineTo(100,200);
-            ctx.fillStyle('#e07072');
+            ctx.strokeStyle = '#e07072';
+            ctx.fillStyle='#e07072';
             ctx.closePath();
             ctx.fill();
             ctx.stroke();
-    </script>
-</head>
-<body>
-    <div class="canvas">
-        <canvas id="1"></canvas>
+            ctx.fillRect(100,205,200,3);
+            ctx.font = "20px Arial";
+            ctx.fillText("HALF CIRCLE", 10, 380);
+        </script>
         <canvas id="2"></canvas>
+        <script>
+            canvas = document.getElementById("2");
+            canvas.width = 400;
+            canvas.height = 400;
+            ctx = canvas.getContext("2d");
+            ctx.fillStyle = '#266b39';
+            ctx.fillRect(0,0,400,400);
+            ctx.beginPath();
+            ctx.arc(50,50,250,0,Math.PI/2);
+            ctx.lineTo(50,50);
+            ctx.strokeStyle = '#f6ec93';
+            ctx.fillStyle='#f6ec93';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(350,350,175,Math.PI,-Math.PI/2);
+            ctx.lineTo(350,350);
+            ctx.strokeStyle = '#ffba93';
+            ctx.fillStyle='#ffba93';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.font = "20px Arial";
+            ctx.fillText("QUADRANT 90°", 10, 380);
+        </script>
     </div>
-    <div class="canvas">
+    <div class="canvas" id="canvas3-4">
         <canvas id="3"></canvas>
+                <script>
+            canvas = document.getElementById("3");
+            canvas.width = 400;
+            canvas.height = 400;
+            ctx = canvas.getContext("2d");
+            ctx.fillStyle = '#fd9069';
+            ctx.fillRect(0,0,400,400);
+            ctx.beginPath();
+            ctx.arc(200,200,125,0,-Math.PI/2);
+            ctx.lineTo(200,200);
+            ctx.strokeStyle = '#efd879';
+            ctx.fillStyle='#efd879';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(220,180,90,-Math.PI/2,0);
+            ctx.lineTo(220,180);
+            ctx.strokeStyle = '#af6170';
+            ctx.fillStyle='#af6170';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.font = "20px Arial";
+            ctx.fillText("THREE QUARTERS 270°", 10, 380);
+        </script>
         <canvas id="4"></canvas>
+        <script>
+            canvas = document.getElementById("4");
+            canvas.width = 400;
+            canvas.height = 400;
+            ctx = canvas.getContext("2d");
+            ctx.fillStyle = '#fcc5b0';
+            ctx.fillRect(0,0,400,400);
+            ctx.beginPath();
+            ctx.arc(200,275,100,-(Math.PI)*(1-1/6),-Math.PI/6);
+            ctx.arc(200,275,85,-Math.PI/6,-(Math.PI)*(1-1/6),true);
+            ctx.strokeStyle = '#d5693e';
+            ctx.fillStyle='#d5693e';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(200,275,130,-(Math.PI)*(1-1/6),-Math.PI/6);
+            ctx.arc(200,275,155,-Math.PI/6,-(Math.PI)*(1-1/6),true);
+            ctx.strokeStyle = '#1b4d0e';
+            ctx.fillStyle='#1b4d0e';
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.font = "20px Arial";
+            ctx.fillText("OPEN ARC 120°", 10, 380);
+        </script>
     </div>
+</div>
 </body>
 </html>
