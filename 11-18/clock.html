@@ -116,14 +116,28 @@ function drawTime(ctx, radius){
 }
 
 function drawHand(ctx, pos, length, width) {
+    ctx.save();
+    ctx.rotate(pos);
+
+    // 外層深色金屬輪廓
     ctx.beginPath();
     ctx.lineWidth = width;
     ctx.lineCap = "round";
-    ctx.moveTo(0,0);
-    ctx.rotate(pos);
+    ctx.strokeStyle = "#2b2d42";
+    ctx.moveTo(0, length * 0.15);
     ctx.lineTo(0, -length);
     ctx.stroke();
-    ctx.rotate(-pos);
+
+    // 內層夜光塗料填色
+    ctx.beginPath();
+    ctx.lineWidth = width * 0.45;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#a8ff78"; // 經典夜光綠
+    ctx.moveTo(0, 0);
+    ctx.lineTo(0, -length * 0.92);
+    ctx.stroke();
+
+    ctx.restore();
 }
 </script>
 
