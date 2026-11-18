@@ -54,7 +54,26 @@ function drawClock() {
   drawNumbers(ctx, radius);
   drawTime(ctx, radius);
 }
-
+function drawScale(){
+  for(let num = 1; num < 360; num++){
+    let ang = num * Math.PI / 360;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    if(num%10==0){
+        tempstyle=ctx.fillStyle;
+        ctx.fillStyle = "red";
+        ctx.fillRect(0,0,20,3);
+        ctx.fillStyle =tempstyle;
+    }
+    else{
+        ctx.fillRect(0,0,15,1);
+    }
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
 function drawFace(ctx, radius) {
 ctx.fillStyle = '#1b3a6e';
 ctx.fillRect(-200, -200, 400, 600);
