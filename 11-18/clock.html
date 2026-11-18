@@ -31,7 +31,7 @@
     </script>
     <style>
         .colorsec{
-            color: #eab54a;
+            color: #ea574a;
         }
     </style>
 </head>
@@ -60,6 +60,7 @@ ctx.fillStyle = '1b3a6e';
 ctx.fillRect(0,0,400,600);
   const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
   grad.addColorStop(0, '#d6a323');
+  grad.addColorStop(1, '#ea574a');
   grad.addColorStop(1, '#e3a60c');
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2*Math.PI);
