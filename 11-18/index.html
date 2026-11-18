@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-16</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        div.canvas{
+            align-content: center;
+            display: flex;
+            align-items: center;
+            height: 400px;
+            width: 800px;
+            align-self: center;
+        }
+        div.padding{
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        canvas{
+            height: 400px;
+            width: 400px;
+            color: #1b4d0e;
+        }
+    </style>
+</head>
+<body>
+    <div class="padding">
+        <canvas id="main"></canvas>
+        <div class="canvas">
+            <script src="script.js"></script>
+            <button onclick="draw_half()">half</button>
+            <button onclick="draw_90()">90</button>
+            <button onclick="draw_270()">270</button>
+            <button onclick="draw_arc()">arc</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
