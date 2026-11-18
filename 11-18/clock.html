@@ -56,8 +56,8 @@ function drawClock() {
 }
 
 function drawFace(ctx, radius) {
-ctx.fillStyle = '1b3a6e';
-ctx.fillRect(0,0,400,600);
+ctx.fillStyle = '#1b3a6e';
+ctx.fillRect(-200, -200, 400, 600);
   const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
   grad.addColorStop(0, '#d6a323');
   grad.addColorStop(1, '#ea574a');
@@ -108,11 +108,12 @@ function drawTime(ctx, radius){
     // second
     second=(second*Math.PI/30);
     drawHand(ctx, second, radius*0.9, radius*0.02);
-    ctx.fillStyle = "#933eb1";
-    ctx.fillRect(150,490,100,20);
-    ctx.fillStyle = "#eab54a";
-    ctx.font = "20px Arial";
-    ctx.fillText(hour.toString()+':'+minute.toString()+":"+second.toString(),152,500);
+ctx.fillStyle = "#933eb1";
+ctx.fillRect(-60, 280, 120, 30);
+ctx.fillStyle = "#eab54a";
+ctx.font = "20px Arial";
+ctx.textAlign = "center";
+ctx.fillText(timeStr, 0, 295);
 }
 
 function drawHand(ctx, pos, length, width) {
