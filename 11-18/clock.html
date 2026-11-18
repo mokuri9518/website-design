@@ -91,29 +91,42 @@ function drawNumbers(ctx, radius) {
   }
 }
 
-function drawTime(ctx, radius){
-    const now = new Date();
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    let second = now.getSeconds();
-    //hour
-    hour=hour%12;
-    hour=(hour*Math.PI/6)+
-    (minute*Math.PI/(6*60))+
-    (second*Math.PI/(360*60));
-    drawHand(ctx, hour, radius*0.5, radius*0.07);
-    //minute
-    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
-    drawHand(ctx, minute, radius*0.8, radius*0.07);
-    // second
-    second=(second*Math.PI/30);
-    drawHand(ctx, second, radius*0.9, radius*0.02);
-ctx.fillStyle = "#933eb1";
-ctx.fillRect(-60, 280, 120, 30);
-ctx.fillStyle = "#eab54a";
-ctx.font = "20px Arial";
-ctx.textAlign = "center";
-ctx.fillText(timeStr, 0, 295);
+function drawTime(ctx, radius) {
+  const now = new Date();
+  const rawHour = now.getHours();
+  const rawMinute = now.getMinutes();
+  const rawSecond = now.getSeconds();
+
+  const h = rawHour % 12;
+  const hourAngle = (h * Math.PI / 6) + (rawMinute * Math.PI / (6 * 60)) + (rawSecond * Math.PI / (360 * 60));
+  const minuteAngle = (rawMinute * Math.PI / 30) + (rawSecond * Math.PI / (30 * 60));
+  const secondAngle = rawSecond * Math.PI / 30;
+
+  drawHand(ctx, hourAngle, radius * 0.5, radius * 0.07);
+  drawHand(ctx, minuteAngle, radius * 0.8, radius * 0.05);
+  drawHand(ctx, secondAngle, radius * 0.9, radius * 0.02);
+
+  // 中心軸蓋
+  ctx.beginPath();
+  ctx.arc(0, 0, radius * 0.08, 0, 2 * Math.PI);
+  ctx.fillStyle = '#2b2d42';
+  ctx.fill();
+
+  // 1. 畫紫色背景框（X: -60 ~ +60, Y: 275 ~ 307）
+  ctx.fillStyle = "#933eb1";
+  ctx.fillRect(-60, 275, 120, 32);
+
+  // 2. 畫時間文字（正中心 X: 0, Y: 291）
+  const timeText = 
+    String(rawHour).padStart(2, '0') + ':' +
+    String(rawMinute).padStart(2, '0') + ':' +
+    String(rawSecond).padStart(2, '0');
+
+  ctx.fillStyle = "#eab54a";
+  ctx.font = "bold 20px Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(timeText, 0, 291);
 }
 
 function drawHand(ctx, pos, length, width) {
